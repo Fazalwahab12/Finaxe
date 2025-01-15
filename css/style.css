@@ -3736,3 +3736,70 @@ li {
 .case-details-nav .next .content {
   text-align: right;
 }
+/* Dropdown styles */
+.has-dropdown {
+  position: relative;
+}
+
+.dropdown {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--darker-blue); /* Dark background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 1.5rem; /* Increased padding for larger box */
+  min-width: 300px; /* Base width for smaller dropdowns */
+  max-width: 1600px; /* Maximum width for larger dropdowns */
+  width: max-content; /* Adjust width based on content */
+  transition: all 0.3s ease;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns */
+  gap: 1rem; /* Increased gap between items */
+}
+
+.has-dropdown:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  top: calc(100% + 10px);
+}
+
+.dropdown::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent var(--darker-blue) transparent; /* Match dropdown background */
+}
+
+.dropdown li {
+  margin-bottom: 0;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.dropdown a {
+  color: white; /* White text color */
+  text-decoration: none;
+  font-size: 1rem; /* Slightly larger font size */
+  transition: background-color 0.3s ease;
+  padding: 0.75rem 1rem; /* Increased padding for links */
+  display: block;
+  white-space: nowrap; /* Ensure text stays in one line */
+}
+
+.dropdown a:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Light hover effect for better visibility */
+}
