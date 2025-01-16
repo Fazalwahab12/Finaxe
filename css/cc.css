@@ -1,0 +1,106 @@
+/* WRAPPER FOR THE SLIDER */
+.case_content {
+  width: 100%;
+  margin-top: 50px;
+  padding: 40px 20px;
+  background: var(--darker-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* SLIDER */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 200%; /* For 2 slides */
+}
+
+/* SLIDES */
+.slide {
+  width: 50%; /* 2 slides -> 50% each */
+  padding: 2rem;
+  flex-shrink: 0;
+}
+
+/* SLIDE CONTENT */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 4rem;
+}
+
+.visual {
+  flex: 1;
+  position: relative;
+}
+
+.visual img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  animation: float 3s infinite ease-in-out;
+}
+
+.text-content {
+  flex: 1;
+  padding-top: 2rem;
+}
+
+/* HEADINGS & PARAGRAPHS */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff; /* <-- Add this line */
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  color: #fff; /* <-- Add this line */
+}
+
+/* BUTTON */
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: #8b5cf6;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* CONTROLS */
+.controls {
+  right: 2rem;
+  transform: translateY(-50%); /* center them vertically */
+  display: flex;
+  flex-direction: column; /* stack them vertically */
+  gap: 1rem; /* space between controls */
+  align-items: center; /* center them horizontally */
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.slide-counter {
+  color: white;
+  font-weight: bold;
+  margin: 0 1rem;
+}

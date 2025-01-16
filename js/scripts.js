@@ -1,37 +1,34 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Get all dropdown toggles
-  const dropdownToggles = document.querySelectorAll(
-    ".has-dropdown > .nav-link"
-  );
+const slider = document.querySelector(".slider");
+const slides = document.querySelectorAll(".slide");
+const prevButton = document.querySelector(".prev-button");
+const nextButton = document.querySelector(".next-button");
+const slideCounter = document.querySelector(".slide-counter");
+let currentSlide = 0;
 
-  dropdownToggles.forEach((toggle) => {
-    toggle.addEventListener("click", function (e) {
-      if (window.innerWidth <= 991) {
-        // Only run on small screens
-        e.preventDefault(); // Prevent default link behavior
-        const parent = this.parentElement; // Get the parent .has-dropdown element
+function updateSlidePosition() {
+  slider.style.transform = `translateX(-${currentSlide * 50}%)`;
+  slideCounter.textContent = `${currentSlide + 1}/2`;
+}
 
-        // Toggle the 'active' class
-        parent.classList.toggle("active");
-
-        // Close other dropdowns
-        dropdownToggles.forEach((otherToggle) => {
-          if (otherToggle !== toggle) {
-            otherToggle.parentElement.classList.remove("active");
-          }
-        });
-      }
-    });
-  });
-
-  // Close dropdowns when clicking outside
-  document.addEventListener("click", function (e) {
-    if (window.innerWidth <= 991) {
-      if (!e.target.closest(".has-dropdown")) {
-        dropdownToggles.forEach((toggle) => {
-          toggle.parentElement.classList.remove("active");
-        });
-      }
-    }
-  });
+prevButton.addEventListener("click", () => {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  updateSlidePosition();
 });
+
+nextButton.addEventListener("click", () => {
+  currentSlide = (currentSlide + 1) % slides.length;
+  updateSlidePosition();
+});
+
+// Optional: Auto-slide
+let isPlaying = true;
+const pauseButton = document.querySelector(".pause-button");
+
+function autoSlide() {
+  if (isPlaying) {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateSlidePosition();
+  }
+}
+
+let slideInterval = setInterval(autoSlide, 5000);
