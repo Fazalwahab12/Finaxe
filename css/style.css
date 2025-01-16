@@ -3736,7 +3736,9 @@ li {
 .case-details-nav .next .content {
   text-align: right;
 }
-/* Dropdown styles */
+/* --------------------------------------
+   Base Dropdown Styles 
+-------------------------------------- */
 .has-dropdown {
   position: relative;
 }
@@ -3752,23 +3754,26 @@ li {
   background: var(--darker-blue); /* Dark background */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  padding: 1.5rem; /* Increased padding for larger box */
-  min-width: 300px; /* Base width for smaller dropdowns */
-  max-width: 1600px; /* Maximum width for larger dropdowns */
-  width: max-content; /* Adjust width based on content */
+
+  min-width: 300px;
+  max-width: 1300px;
+  width: max-content;
   transition: all 0.3s ease;
   z-index: 1;
+
+  /* Example: 3-column layout for the first level dropdown */
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns */
-  gap: 1rem; /* Increased gap between items */
+  grid-template-columns: repeat(1, 1fr);
 }
 
+/* Show the .dropdown on hover */
 .has-dropdown:hover .dropdown {
   opacity: 1;
   visibility: visible;
   top: calc(100% + 10px);
 }
 
+/* Little arrow pointing up */
 .dropdown::before {
   content: "";
   position: absolute;
@@ -3777,7 +3782,7 @@ li {
   transform: translateX(-50%);
   border-width: 0 10px 10px 10px;
   border-style: solid;
-  border-color: transparent transparent var(--darker-blue) transparent; /* Match dropdown background */
+  border-color: transparent transparent var(--darker-blue) transparent;
 }
 
 .dropdown li {
@@ -3790,16 +3795,59 @@ li {
   text-decoration: none;
   font-size: 1rem; /* Slightly larger font size */
   transition: background-color 0.3s ease;
-  padding: 0.75rem 1rem; /* Increased padding for links */
+  padding: 0.75rem 1rem;
   display: block;
-  white-space: nowrap; /* Ensure text stays in one line */
+  white-space: nowrap;
 }
 
 .dropdown a:hover {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.1
-  ); /* Light hover effect for better visibility */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --------------------------------------
+   Nested Sub-Menu (Second Level) 
+-------------------------------------- */
+.has-submenu {
+  position: relative; /* So we can position sub-dropdown absolutely */
+}
+
+/* By default, hide sub-dropdown */
+.sub-dropdown {
+  position: absolute;
+  top: 0;
+  left: 100%; /* Appear to the right of the parent */
+  opacity: 0;
+  visibility: hidden;
+  background: var(--darker-blue);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 0.75rem;
+  min-width: 220px;
+  transition: all 0.3s ease;
+  z-index: 999; /* Ensure it appears on top */
+
+  /* Single column for second-level submenus */
+  display: block;
+}
+
+/* Show the sub-dropdown on hover */
+.has-submenu:hover > .sub-dropdown {
+  opacity: 1;
+  visibility: visible;
+  top: 0; /* Align top edges */
+  left: 100%; /* Shift it to the right of the parent menu item */
+}
+
+/* Nested sub-sub-dropdown if needed (third level, etc.) 
+   Same pattern: .has-submenu .sub-dropdown .has-submenu .sub-dropdown { ... } 
+   – You can repeat or fine-tune these rules for deeper nesting.
+*/
+
+/* Example arrow (optional) for nested submenus */
+.has-submenu > a::after {
+  content: ">";
+  float: right;
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  opacity: 0.6;
 }

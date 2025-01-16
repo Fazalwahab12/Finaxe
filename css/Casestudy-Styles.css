@@ -1,0 +1,110 @@
+/* Reset and General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Hero Section */
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.hero-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  margin: 2rem 0;
+  opacity: 0.8;
+}
+
+/* Content Section */
+.content-section {
+  margin-bottom: 4rem;
+}
+
+.content-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.content-section p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* Stats Section */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #333;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.stat-label {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Related Section */
+.related {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #333;
+}
+
+.related h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.related-links {
+  list-style: none;
+}
+
+.related-links a {
+  color: #4a9eff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+.related-links a:hover {
+  text-decoration: underline;
+}
