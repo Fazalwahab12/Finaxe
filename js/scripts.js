@@ -31,4 +31,4 @@ function autoSlide() {
   }
 }
 
-let slideInterval = setInterval(autoSlide, 5000);
+let slideInterval = setInterval(autoSlide, 3000);
