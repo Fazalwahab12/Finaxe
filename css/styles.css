@@ -8,6 +8,7 @@
 }
 
 /* Card Grid */
+/* Default - 4 Cards per Row */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 cards per row by default */
@@ -15,6 +16,37 @@
   width: 100%;
   max-width: 1200px;
 }
+
+/* Tablet View - 2 Cards per Row */
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+  .card img {
+    height: 120px;
+  }
+  .card-content h3 {
+    font-size: 14px;
+  }
+}
+
+/* Mobile View - 1 Card per Row */
+@media (max-width: 480px) {
+  .card-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 card per row */
+  }
+  .card img {
+    height: 100px;
+  }
+  .card-content h3 {
+    font-size: 12px;
+  }
+  .read-more {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
 /* Individual Card Styling */
 .card {
   background: white;

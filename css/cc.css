@@ -36,6 +36,7 @@
   gap: 4rem;
 }
 
+/* By default, image first, text second */
 .visual {
   flex: 1;
   position: relative;
@@ -57,7 +58,7 @@
 h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #fff; /* <-- Add this line */
+  color: #fff; /* Add this line */
 }
 
 p {
@@ -65,7 +66,7 @@ p {
   line-height: 1.6;
   margin-bottom: 2rem;
   opacity: 0.9;
-  color: #fff; /* <-- Add this line */
+  color: #fff; /* Add this line */
 }
 
 /* BUTTON */
@@ -83,11 +84,11 @@ p {
 /* CONTROLS */
 .controls {
   right: 2rem;
-  transform: translateY(-50%); /* center them vertically */
+  transform: translateY(-50%);
   display: flex;
-  flex-direction: column; /* stack them vertically */
-  gap: 1rem; /* space between controls */
-  align-items: center; /* center them horizontally */
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
 }
 
 .nav-button {
@@ -103,4 +104,63 @@ p {
   color: white;
   font-weight: bold;
   margin: 0 1rem;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+  .slider {
+    width: 100%; /* Full width */
+  }
+
+  .slide {
+    width: 100%; /* Each slide takes full width */
+    padding: 1rem;
+  }
+
+  .content {
+    flex-direction: column; /* Stack content vertically */
+    gap: 1rem; /* Reduce spacing */
+    text-align: center; /* Center text */
+  }
+
+  /* Make text content appear first */
+  .text-content {
+    order: -1; /* Moves text above the image */
+    padding-top: 0;
+  }
+
+  /* Adjust image size */
+  .visual img {
+    max-width: 100%;
+    height: auto;
+    animation: none; /* Remove float animation on small screens */
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .read-more {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .read-more {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
 }
