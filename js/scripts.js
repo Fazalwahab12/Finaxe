@@ -4,10 +4,17 @@ const prevButton = document.querySelector(".prev-button");
 const nextButton = document.querySelector(".next-button");
 const slideCounter = document.querySelector(".slide-counter");
 let currentSlide = 0;
+let isPlaying = true;
 
+// Update slider position and counter
 function updateSlidePosition() {
-  slider.style.transform = `translateX(-${currentSlide * 50}%)`;
-  slideCounter.textContent = `${currentSlide + 1}/2`;
+  // Translate based on the total number of slides
+  const slideWidthPercentage = 100 / slides.length;
+  slider.style.transform = `translateX(-${
+    currentSlide * slideWidthPercentage
+  }%)`;
+  // Update counter text: e.g. "1/4"
+  slideCounter.textContent = `${currentSlide + 1}/${slides.length}`;
 }
 
 prevButton.addEventListener("click", () => {
@@ -20,15 +27,21 @@ nextButton.addEventListener("click", () => {
   updateSlidePosition();
 });
 
-// Optional: Auto-slide
-let isPlaying = true;
-const pauseButton = document.querySelector(".pause-button");
-
+// Automatic sliding (optional)
 function autoSlide() {
   if (isPlaying) {
     currentSlide = (currentSlide + 1) % slides.length;
     updateSlidePosition();
   }
 }
-
 let slideInterval = setInterval(autoSlide, 3000);
+
+// If you want to toggle pause/play via a button, you could do something like:
+// const pauseButton = document.querySelector(".pause-button");
+// pauseButton.addEventListener("click", () => {
+//   isPlaying = !isPlaying;
+//   pauseButton.textContent = isPlaying ? "Pause" : "Play";
+// });
+
+// Initialize the slider on load
+updateSlidePosition();

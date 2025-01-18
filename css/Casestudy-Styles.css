@@ -1,6 +1,8 @@
-/* Reset and General Styles */
+/* ----------------------------------
+   1. Reset and General Styles
+------------------------------------- */
 * {
-  margin: 0;
+  padding-top: 100px;
   padding: 0;
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -8,103 +10,131 @@
 }
 
 body {
+  padding-top: 100px;
   background-color: #000;
   color: #fff;
   line-height: 1.6;
 }
 
+/* ----------------------------------
+   2. Container
+------------------------------------- */
 .container {
-  max-width: 1200px;
+  width: 90%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
-/* Hero Section */
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  color: #888;
-}
-
-.hero-image {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  margin: 2rem 0;
-  opacity: 0.8;
-}
-
-/* Content Section */
-.content-section {
-  margin-bottom: 4rem;
-}
-
-.content-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  font-weight: 500;
-}
-
-.content-section p {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-  color: #ccc;
-}
-
-/* Stats Section */
-.stats {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 4rem;
-  padding-top: 2rem;
-  border-top: 1px solid #333;
-}
-
-.stat-item {
+/* ----------------------------------
+   3. Hero Section
+------------------------------------- */
+.hero-h1 {
   text-align: center;
+  margin-bottom: 2rem;
 }
 
-.stat-number {
+.hero-h1 h1 {
   font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: #fff;
-}
-
-.stat-label {
-  color: #888;
-  font-size: 0.9rem;
-}
-
-/* Related Section */
-.related {
-  margin-top: 4rem;
-  padding-top: 2rem;
-  border-top: 1px solid #333;
-}
-
-.related h3 {
-  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.related-links {
-  list-style: none;
+.welcome-image {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #fff;
+  border-radius: 4px;
 }
 
-.related-links a {
-  color: #4a9eff;
-  text-decoration: none;
-  font-size: 1.1rem;
-  line-height: 2;
+/* ----------------------------------
+   4. Section Titles
+------------------------------------- */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
 }
 
-.related-links a:hover {
-  text-decoration: underline;
+/* ----------------------------------
+   5. Focus Areas
+------------------------------------- */
+.focus-areas {
+  margin-bottom: 2rem;
+}
+
+.focus-areas ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+}
+
+/* ----------------------------------
+   6. Specializations
+------------------------------------- */
+.specializations {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+
+.specializations article {
+  flex: 1 1 calc(33% - 2rem);
+  background: #333;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.specializations article h3 {
+  margin-bottom: 0.5rem;
+}
+
+.specializations article p {
+  line-height: 1.4;
+}
+
+/* ----------------------------------
+   7. Freight Services
+------------------------------------- */
+.freight-services {
+  margin-bottom: 2rem;
+}
+
+.freight-services ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+}
+
+/* ----------------------------------
+   8. E-commerce Logistics
+------------------------------------- */
+.ecommerce-logistics ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+}
+
+/* ----------------------------------
+   9. Responsive / Columns
+------------------------------------- */
+/* Two columns for certain sections on larger screens */
+@media (min-width: 992px) {
+  .focus-areas ul,
+  .freight-services ul,
+  .ecommerce-logistics ul {
+    columns: 2; /* Create two columns */
+    column-gap: 2rem; /* Space between columns */
+  }
+}
+
+/* Stack articles on smaller screens */
+@media (max-width: 768px) {
+  .specializations {
+    display: block;
+  }
+  .specializations article {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }

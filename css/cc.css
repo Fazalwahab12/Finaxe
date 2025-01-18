@@ -1,16 +1,20 @@
-/* WRAPPER FOR THE SLIDER */
+/* WRAPPER */
 .case_content {
   width: 100%;
   margin-top: 50px;
   padding: 40px 20px;
   background: var(--darker-blue);
   display: flex;
+  flex-direction: column; /* Stack container and controls vertically */
   justify-content: center;
   align-items: center;
 }
+
+/* SLIDER CONTAINER */
 .slider-container {
   width: 100%;
-  overflow: hidden;
+  max-width: 1200px;
+  overflow: hidden; /* Hide overflow so slides don't extend outside */
   position: relative;
 }
 
@@ -18,25 +22,24 @@
 .slider {
   display: flex;
   transition: transform 0.5s ease;
-  width: 200%; /* For 2 slides */
+  width: 400%; /* 4 slides => 4 x 100% of the container = 400% */
 }
 
 /* SLIDES */
 .slide {
-  width: 50%; /* 2 slides -> 50% each */
+  width: 25%; /* 4 slides => each is 25% */
   padding: 2rem;
   flex-shrink: 0;
 }
 
 /* SLIDE CONTENT */
 .content {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   gap: 4rem;
+  height: 100%;
+  align-items: center;
 }
 
-/* By default, image first, text second */
 .visual {
   flex: 1;
   position: relative;
@@ -49,16 +52,27 @@
   animation: float 3s infinite ease-in-out;
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .text-content {
   flex: 1;
   padding-top: 2rem;
 }
 
-/* HEADINGS & PARAGRAPHS */
 h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #fff; /* Add this line */
+  color: #fff;
 }
 
 p {
@@ -66,10 +80,9 @@ p {
   line-height: 1.6;
   margin-bottom: 2rem;
   opacity: 0.9;
-  color: #fff; /* Add this line */
+  color: #fff;
 }
 
-/* BUTTON */
 .read-more {
   display: inline-flex;
   align-items: center;
@@ -83,12 +96,13 @@ p {
 
 /* CONTROLS */
 .controls {
-  right: 2rem;
-  transform: translateY(-50%);
+  margin-top: 1rem; /* Some spacing below the slides */
+}
+
+.navigation {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
   align-items: center;
+  gap: 1rem;
 }
 
 .nav-button {
@@ -103,37 +117,26 @@ p {
 .slide-counter {
   color: white;
   font-weight: bold;
-  margin: 0 1rem;
 }
 
 /* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
-  .slider {
-    width: 100%; /* Full width */
-  }
-
-  .slide {
-    width: 100%; /* Each slide takes full width */
-    padding: 1rem;
-  }
-
   .content {
-    flex-direction: column; /* Stack content vertically */
-    gap: 1rem; /* Reduce spacing */
-    text-align: center; /* Center text */
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
   }
 
-  /* Make text content appear first */
+  /* Text first on mobile */
   .text-content {
-    order: -1; /* Moves text above the image */
+    order: -1;
     padding-top: 0;
   }
 
-  /* Adjust image size */
   .visual img {
     max-width: 100%;
     height: auto;
-    animation: none; /* Remove float animation on small screens */
+    animation: none; /* Remove float on small screens */
   }
 
   h1 {
