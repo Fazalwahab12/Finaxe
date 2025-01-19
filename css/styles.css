@@ -1,61 +1,22 @@
-.case_content {
-  width: 100%;
-  padding: 40px 20px;
-  background: var(--darker-blue);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Card Grid */
-/* Default - 4 Cards per Row */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 cards per row by default */
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
   gap: 20px;
-  width: 100%;
   max-width: 1200px;
+  margin: auto;
 }
 
-/* Tablet View - 2 Cards per Row */
-@media (max-width: 768px) {
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-  }
-  .card img {
-    height: 120px;
-  }
-  .card-content h3 {
-    font-size: 14px;
-  }
-}
-
-/* Mobile View - 1 Card per Row */
-@media (max-width: 480px) {
-  .card-grid {
-    grid-template-columns: repeat(1, 1fr); /* 1 card per row */
-  }
-  .card img {
-    height: 100px;
-  }
-  .card-content h3 {
-    font-size: 12px;
-  }
-  .read-more {
-    padding: 6px 12px;
-    font-size: 12px;
-  }
-}
-
-/* Individual Card Styling */
+/* Card Styling */
 .card {
-  background: white;
-  border-radius: 8px;
+  background: #f1f1ef;
+
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
@@ -63,60 +24,81 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Card Image */
-.card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
 /* Card Content */
 .card-content {
   padding: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  text-align: left;
+  flex-grow: 1; /* Pushes the image down */
+}
+
+.case-study {
+  font-size: 12px;
+  font-weight: bold;
+  color: #666;
+  text-transform: uppercase;
 }
 
 .card-content h3 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   color: #333;
-  margin: 8px 0;
+  margin: 8px 0 16px 0; /* Added spacing between h3 and image */
 }
 
+/* Image Container */
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Ensures image fully covers the bottom part */
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the full area */
+  transition: opacity 0.3s ease;
+}
+
+/* Read More Button */
 .read-more {
-  margin-top: 12px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 8px 16px;
   font-size: 14px;
   color: white;
-  background-color: #0091d9;
+  background-color: rgba(0, 145, 217, 0.9);
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show Read More on Hover */
+.card:hover .read-more {
+  opacity: 1;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .card img {
-    height: 120px;
-  }
-  .card-content h3 {
-    font-size: 14px;
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
+  .card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .card img {
-    height: 100px;
+    height: 200px;
   }
+
   .card-content h3 {
-    font-size: 12px;
-  }
-  .read-more {
-    padding: 6px 12px;
-    font-size: 12px;
+    font-size: 16px;
   }
 }

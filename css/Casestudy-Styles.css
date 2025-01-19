@@ -12,7 +12,7 @@
 body {
   padding-top: 100px;
   background-color: #000;
-  color: #fff;
+  color: #fff; /* This will set the default text color to white */
   line-height: 1.6;
 }
 
@@ -51,22 +51,104 @@ body {
 h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #fff;
+  border-bottom: none; /* Removed underline for all h2 titles */
   display: inline-block;
   padding-bottom: 0.5rem;
   text-transform: uppercase;
 }
 
-/* ----------------------------------
-   5. Focus Areas
-------------------------------------- */
+/* Focus Areas Specific Styles */
 .focus-areas {
   margin-bottom: 2rem;
 }
 
-.focus-areas ul {
-  list-style-type: disc;
-  margin-left: 2rem;
+copy
+css
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000; /* Black background */
+  color: #fff; /* Default text color to white */
+}
+
+/* Container for the content */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Focus Areas Section */
+.focus-areas {
+  margin-bottom: 2rem;
+}
+
+.focus-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  border-bottom: none; /* No underline */
+}
+
+/* Flexbox for the Focus List */
+.focus-list {
+  display: flex; /* Enable flexbox */
+  flex-direction: row; /* Arrange items in a row */
+  gap: 2rem; /* Space between items */
+}
+
+.focus-list p {
+  background-color: #444; /* Optional: background color for each item */
+  padding: 1rem; /* Space inside each item */
+  border-radius: 5px; /* Rounded corners */
+  color: white; /* Ensure text is white */
+  flex: 1; /* Allow items to grow equally */
+  text-align: center; /* Center align text */
+}
+/* ----------------------------------
+   6. Specializations
+
+/* ----------------------------------
+   1. Reset and General Styles
+------------------------------------- */
+* {
+  padding-top: 100px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+  padding-top: 100px;
+  background-color: #000;
+  color: #fff; /* This will set the default text color to white */
+  line-height: 1.6;
+}
+
+/* ----------------------------------
+   2. Container
+------------------------------------- */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* ----------------------------------
+   3. Section Titles
+------------------------------------- */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem; /* Add spacing before the heading */
+  text-transform: uppercase;
 }
 
 /* ----------------------------------
@@ -80,61 +162,43 @@ h2 {
 }
 
 .specializations article {
-  flex: 1 1 calc(33% - 2rem);
+  flex: 1 1 calc(25% - 2rem); /* Adjust size for four equal columns */
   background: #333;
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column; /* Align items vertically */
 }
 
 .specializations article h3 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem; /* Increased spacing below the heading */
 }
 
-.specializations article p {
-  line-height: 1.4;
+.points-list {
+  flex: 1; /* Allow the list to take up available space */
 }
 
-/* ----------------------------------
-   7. Freight Services
-------------------------------------- */
-.freight-services {
-  margin-bottom: 2rem;
+/* Remove bullets from points */
+.points-list p {
+  margin-bottom: 0.5rem; /* Add space between paragraphs */
+  list-style-type: none; /* Remove bullets if it were a list */
 }
-
-.freight-services ul {
-  list-style-type: disc;
-  margin-left: 2rem;
+@media (max-width: 768px) {
+  .focus-list {
+    flex-direction: column; /* Stack items vertically on small screens */
+    gap: 1rem; /* Space between items when stacked */
+  }
 }
-
-/* ----------------------------------
-   8. E-commerce Logistics
-------------------------------------- */
-.ecommerce-logistics ul {
-  list-style-type: disc;
-  margin-left: 2rem;
-}
-
 /* ----------------------------------
    9. Responsive / Columns
 ------------------------------------- */
-/* Two columns for certain sections on larger screens */
-@media (min-width: 992px) {
-  .focus-areas ul,
-  .freight-services ul,
-  .ecommerce-logistics ul {
-    columns: 2; /* Create two columns */
-    column-gap: 2rem; /* Space between columns */
-  }
-}
-
-/* Stack articles on smaller screens */
 @media (max-width: 768px) {
   .specializations {
-    display: block;
+    display: block; /* Stack articles on smaller screens */
   }
   .specializations article {
-    width: 100%;
+    width: 100%; /* Make each article full width */
     margin-bottom: 1rem;
   }
 }
