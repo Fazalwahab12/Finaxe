@@ -62,9 +62,6 @@ h2 {
   margin-bottom: 2rem;
 }
 
-copy
-css
-
 /* General Reset */
 * {
   margin: 0;
@@ -151,21 +148,16 @@ h2 {
   text-transform: uppercase;
 }
 
-/* ----------------------------------
-   6. Specializations
-------------------------------------- */
 .specializations {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
   gap: 2rem;
   margin-bottom: 2rem;
-  flex-wrap: wrap; /* allows wrapping on smaller screens */
 }
 
 .specializations article {
-  flex: 1 1 calc(25% - 2rem); /* Adjust size for four equal columns */
   background: #333;
   padding: 1rem;
-  margin-bottom: 1rem;
   border-radius: 5px;
   display: flex;
   flex-direction: column; /* Align items vertically */
@@ -184,21 +176,17 @@ h2 {
   margin-bottom: 0.5rem; /* Add space between paragraphs */
   list-style-type: none; /* Remove bullets if it were a list */
 }
+
+/* Responsive: Make it 1 column on small screens */
+@media (max-width: 768px) {
+  .specializations {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+}
+
 @media (max-width: 768px) {
   .focus-list {
     flex-direction: column; /* Stack items vertically on small screens */
     gap: 1rem; /* Space between items when stacked */
-  }
-}
-/* ----------------------------------
-   9. Responsive / Columns
-------------------------------------- */
-@media (max-width: 768px) {
-  .specializations {
-    display: block; /* Stack articles on smaller screens */
-  }
-  .specializations article {
-    width: 100%; /* Make each article full width */
-    margin-bottom: 1rem;
   }
 }
