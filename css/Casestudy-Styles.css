@@ -5,6 +5,8 @@
   padding-top: 100px;
   padding: 0;
   box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
 }
 
 body {
@@ -12,7 +14,6 @@ body {
   background-color: #000;
   color: #fff; /* This will set the default text color to white */
   line-height: 1.6;
-  font-family: "Overpass", sans-serif;
 }
 
 /* ----------------------------------
@@ -92,7 +93,6 @@ body {
   margin-bottom: 1rem;
   text-transform: uppercase;
   border-bottom: none; /* No underline */
-  font-family: "Yeseva One", cursive;
 }
 
 /* Flexbox for the Focus List */
@@ -147,7 +147,6 @@ h2 {
   font-size: 1.8rem;
   margin-bottom: 2rem; /* Add spacing before the heading */
   text-transform: uppercase;
-  font-family: "Yeseva One", cursive;
 }
 
 .specializations {
