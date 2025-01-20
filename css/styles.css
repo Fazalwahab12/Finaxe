@@ -1,4 +1,14 @@
-/* Card Grid */
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900|Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@900&family=Overpass:wght@100;400;700;900&display=swap");
+:root {
+  --brand-blue: #0091d9;
+  --white: #faf0e6;
+  --brand-black: #1a1a1a;
+  --dark-blue: #282f49;
+  --darker-blue: #1b2031;
+  --header-font: "Chivo", arial-black;
+  --paragraph-font: "Overpass", sans-serif;
+}
 .card-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
@@ -43,6 +53,7 @@
   font-weight: bold;
   color: #333;
   margin: 8px 0 16px 0; /* Added spacing between h3 and image */
+  font-family: var(--header-font);
 }
 
 /* Image Container */

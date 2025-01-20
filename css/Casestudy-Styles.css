@@ -1,12 +1,10 @@
-/* ----------------------------------
-   1. Reset and General Styles
-------------------------------------- */
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900|Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@900&family=Overpass:wght@100;400;700;900&display=swap");
+
 * {
   padding-top: 100px;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, sans-serif;
 }
 
 body {
@@ -14,6 +12,7 @@ body {
   background-color: #000;
   color: #fff; /* This will set the default text color to white */
   line-height: 1.6;
+  font-family: "Overpass", sans-serif;
 }
 
 /* ----------------------------------
@@ -31,11 +30,13 @@ body {
 .hero-h1 {
   text-align: center;
   margin-bottom: 2rem;
+  font-family: "Yeseva One", cursive;
 }
 
 .hero-h1 h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  font-family: "Yeseva One", cursive;
 }
 
 .welcome-image {
@@ -53,6 +54,7 @@ h2 {
   display: inline-block;
   padding-bottom: 0.5rem;
   text-transform: uppercase;
+  font-family: "Yeseva One", cursive;
 }
 
 /* Focus Areas Specific Styles */
@@ -90,6 +92,7 @@ body {
   margin-bottom: 1rem;
   text-transform: uppercase;
   border-bottom: none; /* No underline */
+  font-family: "Yeseva One", cursive;
 }
 
 /* Flexbox for the Focus List */
@@ -144,6 +147,7 @@ h2 {
   font-size: 1.8rem;
   margin-bottom: 2rem; /* Add spacing before the heading */
   text-transform: uppercase;
+  font-family: "Yeseva One", cursive;
 }
 
 .specializations {
