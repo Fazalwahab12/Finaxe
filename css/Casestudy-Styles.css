@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900|Yeseva+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chivo:wght@900&family=Overpass:wght@100;400;700;900&display=swap");
-
-* {
-  padding-top: 100px;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, sans-serif;
+:root {
+  --brand-blue: #0091d9;
+  --white: #faf0e6;
+  --brand-black: #1a1a1a;
+  --dark-blue: #282f49;
+  --darker-blue: #1b2031;
+  --header-font: "Chivo", arial-black;
+  --paragraph-font: "Overpass", sans-serif;
 }
-
 /* ----------------------------------
    3. Hero Section
 ------------------------------------- */
@@ -16,13 +16,13 @@
   text-align: center;
   margin-top: 8rem;
   margin-bottom: 2rem;
-  font-family: "Yeseva One", cursive;
+  font-family: var(--header-font);
 }
 
 .hero-h1 h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  font-family: "Yeseva One", cursive;
+  font-family: var(--header-font);
 }
 
 .welcome-image {
@@ -46,7 +46,7 @@ h2 {
   display: inline-block;
   padding-bottom: 0.5rem;
   text-transform: uppercase;
-  font-family: "Yeseva One", cursive;
+  font-family: var(--header-font);
 }
 
 /* Focus Areas Specific Styles */
@@ -74,6 +74,7 @@ body {
   margin-bottom: 1rem;
   text-transform: uppercase;
   border-bottom: none; /* No underline */
+  font-family: var(--header-font);
 }
 
 /* Flexbox for the Focus List */
@@ -106,6 +107,7 @@ h2 {
   font-size: 1.8rem;
   margin-bottom: 2rem; /* Add spacing before the heading */
   text-transform: uppercase;
+  font-family: var(--header-font);
 }
 
 .specializations {
@@ -128,6 +130,7 @@ h2 {
 
 .specializations article h3 {
   margin-bottom: 1rem; /* Increased spacing below the heading */
+  font-family: var(--header-font);
 }
 
 .points-list {
