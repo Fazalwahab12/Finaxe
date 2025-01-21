@@ -9,27 +9,12 @@
     Ubuntu, Cantarell, sans-serif;
 }
 
-body {
-  padding-top: 100px;
-  background-color: #000;
-  color: #fff; /* This will set the default text color to white */
-  line-height: 1.6;
-}
-
-/* ----------------------------------
-   2. Container
-------------------------------------- */
-.container {
-  width: 90%;
-  margin: 0 auto;
-  padding: 2rem 0;
-}
-
 /* ----------------------------------
    3. Hero Section
 ------------------------------------- */
 .hero-h1 {
   text-align: center;
+  margin-top: 8rem;
   margin-bottom: 2rem;
   font-family: "Yeseva One", cursive;
 }
@@ -41,8 +26,10 @@ body {
 }
 
 .welcome-image {
-  max-width: 100%;
-  height: auto;
+  max-width: 70%; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensures it follows normal flow */
+  margin-left: 0; /* Aligns to the left */
 }
 
 /* ----------------------------------
@@ -61,6 +48,8 @@ h2 {
 /* Focus Areas Specific Styles */
 .focus-areas {
   margin-bottom: 2rem;
+  margin-left: 5rem;
+  margin-top: 3rem;
 }
 
 /* General Reset */
@@ -72,20 +61,8 @@ h2 {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #000; /* Black background */
+  background: var(--darker-blue);
   color: #fff; /* Default text color to white */
-}
-
-/* Container for the content */
-.container {
-  width: 90%;
-  margin: 0 auto;
-  padding: 2rem 0;
-}
-
-/* Focus Areas Section */
-.focus-areas {
-  margin-bottom: 2rem;
 }
 
 .focus-title {
@@ -100,49 +77,27 @@ body {
   display: flex; /* Enable flexbox */
   flex-direction: row; /* Arrange items in a row */
   gap: 2rem; /* Space between items */
+  margin-left: -3rem;
+  margin-top: 0rem;
 }
 
 .focus-list p {
-  background-color: #444; /* Optional: background color for each item */
-  padding: 1rem; /* Space inside each item */
-  border-radius: 5px; /* Rounded corners */
-  color: white; /* Ensure text is white */
-  flex: 1; /* Allow items to grow equally */
-  text-align: center; /* Center align text */
-}
-/* ----------------------------------
-   6. Specializations
-
-/* ----------------------------------
-   1. Reset and General Styles
-------------------------------------- */
-* {
-  padding-top: 100px;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, sans-serif;
+  background-color: transparent; /* No background */
+  padding: 1rem;
+  border-radius: 5px;
+  color: white;
+  flex: 1;
+  text-align: center;
+  position: relative; /* Ensures the bullet positions correctly */
 }
 
-body {
-  padding-top: 100px;
-  background-color: #000;
-  color: #fff; /* This will set the default text color to white */
-  line-height: 1.6;
+.focus-list p::before {
+  content: "• "; /* Adds a bullet point */
+  color: white; /* Ensures bullet is visible */
+  font-size: 1.2rem; /* Adjust bullet size if needed */
+  font-weight: bold;
 }
 
-/* ----------------------------------
-   2. Container
-------------------------------------- */
-.container {
-  width: 90%;
-  margin: 0 auto;
-  padding: 2rem 0;
-}
-
-/* ----------------------------------
-   3. Section Titles
-------------------------------------- */
 h2 {
   font-size: 1.8rem;
   margin-bottom: 2rem; /* Add spacing before the heading */
@@ -154,6 +109,9 @@ h2 {
   grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
   gap: 2rem;
   margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 .specializations article {
