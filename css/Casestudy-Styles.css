@@ -26,12 +26,16 @@
 }
 
 .welcome-image {
-  max-width: 70%; /* Adjust the size as needed */
+  max-width: 60%; /* Adjust the size as needed */
   height: auto; /* Maintain aspect ratio */
   display: block; /* Ensures it follows normal flow */
   margin-left: 0; /* Aligns to the left */
 }
-
+@media (max-width: 768px) {
+  .welcome-image {
+    max-width: 100%; /* Make image take full width on mobile */
+  }
+}
 /* ----------------------------------
    4. Section Titles
 ------------------------------------- */
@@ -139,7 +143,16 @@ h2 {
 /* Responsive: Make it 1 column on small screens */
 @media (max-width: 768px) {
   .specializations {
-    grid-template-columns: 1fr; /* Single column layout */
+    margin-left: 1rem;
+    margin-right: 1rem;
+    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+  }
+}
+
+/* On very small screens, make it a single column */
+@media (max-width: 480px) {
+  .specializations {
+    grid-template-columns: 1fr; /* Single column */
   }
 }
 
