@@ -94,13 +94,14 @@ body {
   flex: 1;
   text-align: center;
   position: relative; /* Ensures the bullet positions correctly */
+  font-family: var(--paragraph-font);
 }
 
 .focus-list p::before {
   content: "• "; /* Adds a bullet point */
   color: white; /* Ensures bullet is visible */
   font-size: 1.2rem; /* Adjust bullet size if needed */
-  font-weight: bold;
+  font-family: var(--paragraph-font);
 }
 
 h2 {
@@ -141,6 +142,7 @@ h2 {
 .points-list p {
   margin-bottom: 0.5rem; /* Add space between paragraphs */
   list-style-type: none; /* Remove bullets if it were a list */
+  font-family: var(--paragraph-font);
 }
 
 /* Responsive: Make it 1 column on small screens */
