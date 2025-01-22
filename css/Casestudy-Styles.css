@@ -13,7 +13,6 @@
    3. Hero Section
 ------------------------------------- */
 .hero-h1 {
-  text-align: center;
   margin-top: 8rem;
   margin-bottom: 2rem;
   font-family: var(--header-font);
@@ -23,14 +22,16 @@
   font-size: 2.5rem;
   margin-bottom: 1rem;
   font-family: var(--header-font);
+  padding-left: 5rem; /* Apply padding only to the H1 */
 }
 
 .welcome-image {
-  max-width: 60%; /* Adjust the size as needed */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Ensures it follows normal flow */
-  margin-left: 0; /* Aligns to the left */
+  max-width: 60%;
+  height: auto;
+  display: block;
+  margin-left: 0; /* Keeps image aligned to the left */
 }
+
 @media (max-width: 768px) {
   .welcome-image {
     max-width: 100%; /* Make image take full width on mobile */

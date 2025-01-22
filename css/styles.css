@@ -12,7 +12,7 @@
 .card-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
-  gap: 20px;
+  gap: 40px;
   max-width: 1200px;
   margin: auto;
 }
