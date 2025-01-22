@@ -13,7 +13,7 @@
    3. Hero Section
 ------------------------------------- */
 .hero-h1 {
-  margin-top: 8rem;
+  margin-top: 10rem;
   margin-bottom: 2rem;
   font-family: var(--header-font);
 }
@@ -25,6 +25,12 @@
   padding-left: 5rem; /* Apply padding only to the H1 */
 }
 
+.hero-h1 p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-family: var(--paragraph-font);
+  padding-left: 5rem; /* Apply padding only to the paragraph */
+}
 .welcome-image {
   max-width: 60%;
   height: auto;
@@ -80,11 +86,18 @@ body {
 
 /* Flexbox for the Focus List */
 .focus-list {
-  display: flex; /* Enable flexbox */
-  flex-direction: row; /* Arrange items in a row */
-  gap: 2rem; /* Space between items */
-  margin-left: -3rem;
-  margin-top: 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Add spacing between items */
+}
+.focus-item {
+  display: flex;
+  align-items: center; /* Aligns text and image horizontally */
+  gap: 10px; /* Space between image and text */
+}
+.focus-item img {
+  width: 24px; /* Adjust icon size */
+  height: 24px;
 }
 
 .focus-list p {
@@ -93,15 +106,8 @@ body {
   border-radius: 5px;
   color: white;
   flex: 1;
-  text-align: center;
-  position: relative; /* Ensures the bullet positions correctly */
-  font-family: var(--paragraph-font);
-}
 
-.focus-list p::before {
-  content: "• "; /* Adds a bullet point */
-  color: white; /* Ensures bullet is visible */
-  font-size: 1.2rem; /* Adjust bullet size if needed */
+  position: relative; /* Ensures the bullet positions correctly */
   font-family: var(--paragraph-font);
 }
 

@@ -62,7 +62,7 @@ $(function () {
 
   // change-navigation-color
   $(window).on("scroll", function () {
-    if ($(document).scrollTop() > 200) {
+    if ($(document).scrollTop() > 50) {
       $(".navbar").addClass("nav__color__change");
     } else {
       $(".navbar").removeClass("nav__color__change");
