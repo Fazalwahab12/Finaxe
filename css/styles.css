@@ -28,7 +28,6 @@
   flex-direction: column;
   position: relative;
 }
-
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -53,9 +52,15 @@
 /* Initially Hidden Text */
 .hidden-text {
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transform: translateX(100%);
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
   font-size: 14px;
   color: #444;
+}
+
+.card:hover .hidden-text {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Image Container */
@@ -64,13 +69,14 @@
   height: 200px;
   overflow: hidden;
   position: relative;
-  transition: opacity 0.3s ease;
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
 }
 
 .card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
 }
 
 /* Expand Link */
@@ -79,17 +85,21 @@
   bottom: 20px;
   left: 70%;
   transform: translateX(-50%);
-
   font-family: var(--header-font);
   color: rgb(5, 0, 0);
   border-radius: 4px;
   text-decoration: none;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.card:hover .expand-link {
+  opacity: 1;
 }
 
 /* Hover Effect: Hide Image, Show Text & Expand Link */
 .card:hover .card-image img {
+  transform: translateX(-100%);
   opacity: 0;
 }
 
