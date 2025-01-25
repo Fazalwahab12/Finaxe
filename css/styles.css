@@ -67,6 +67,40 @@
   color: #444;
   text-align: center; /* Center align text */
 }
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-family: var(--header-font);
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--white); /* Changed to white */
+}
+
+.section-subtitle {
+  font-family: var(--paragraph-font);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--white); /* Changed to white */
+  margin-top: 8px;
+}
+.sub-dropdown {
+  list-style: none; /* Removes the default bullet points */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+}
+
+.sub-dropdown li {
+  margin-bottom: 8px; /* Optional: Adds spacing between items */
+}
+
+.sub-dropdown li a {
+  text-decoration: none; /* Removes underline from links */
+  /* Matches the parent text color */
+  display: block; /* Ensures the links are block-level for better clickability */
+}
 
 .card:hover .hidden-text {
   opacity: 1;

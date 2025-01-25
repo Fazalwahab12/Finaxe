@@ -3772,6 +3772,31 @@ li {
   visibility: visible;
   top: calc(100% + 10px);
 }
+.nav-item {
+  list-style: none; /* Removes the dots */
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none; /* Removes underline from the link */
+  /* Keeps the color consistent */
+  cursor: pointer;
+}
+
+.dropdown {
+  list-style: none; /* Removes dots from dropdown list */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+}
+
+.dropdown li {
+  margin-bottom: 8px; /* Optional: Adds spacing between dropdown items */
+}
+
+.dropdown li a {
+  text-decoration: none; /* Ensures no underline for dropdown links */
+  /* Matches parent text color */
+}
 
 /* Little arrow pointing up */
 .dropdown::before {
