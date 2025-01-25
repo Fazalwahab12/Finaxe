@@ -52,10 +52,20 @@
 /* Initially Hidden Text */
 .hidden-text {
   opacity: 0;
+  position: absolute; /* Positioned in the same area as the image */
+  top: 5rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(241, 241, 239, 0.9); /* Optional background for contrast */
   transform: translateX(100%);
   transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
   font-size: 14px;
   color: #444;
+  text-align: center; /* Center align text */
 }
 
 .card:hover .hidden-text {
@@ -98,15 +108,11 @@
 }
 
 /* Hover Effect: Hide Image, Show Text & Expand Link */
+
 .card:hover .card-image img {
-  transform: translateX(-100%);
+  transform: scale(1.1);
   opacity: 0;
 }
-
-.card:hover .hidden-text {
-  opacity: 1;
-}
-
 .card:hover .expand-link {
   opacity: 1;
 }
