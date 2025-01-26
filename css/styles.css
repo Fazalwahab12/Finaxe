@@ -6,7 +6,7 @@
   --brand-black: #1a1a1a;
   --dark-blue: #282f49;
   --darker-blue: #1b2031;
-  --header-font: "Chivo", arial-black;
+  --header-font: "Overpass", arial-black;
   --paragraph-font: "Overpass", sans-serif;
 }
 
@@ -55,8 +55,8 @@
 }
 
 .card-content h3 {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 15px;
+  font-weight: 400;
   color: #333;
   margin-bottom: 16px;
   font-family: var(--header-font);
