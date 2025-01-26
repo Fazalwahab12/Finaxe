@@ -133,7 +133,7 @@ h2 {
   grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
   gap: 2rem;
   margin-bottom: 2rem;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
   margin-left: 5rem;
   margin-right: 5rem;
 }
@@ -147,9 +147,10 @@ h2 {
 }
 
 .specializations article h3 {
-  margin-bottom: 1rem; /* Increased spacing below the heading */
+  margin-bottom: 1rem; 
   font-family: var(--header-font);
-}
+  font-size:40px;
+}   
 
 .points-list {
   flex: 1; /* Allow the list to take up available space */
@@ -157,9 +158,11 @@ h2 {
 
 /* Remove bullets from points */
 .points-list p {
-  margin-bottom: 0.5rem; /* Add space between paragraphs */
+  margin-bottom: 20px; /* Add space between paragraphs */
   list-style-type: none; /* Remove bullets if it were a list */
   font-family: var(--paragraph-font);
+  font-size:20px;
+
 }
 
 /* Responsive: Make it 1 column on small screens */
