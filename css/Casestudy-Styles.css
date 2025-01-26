@@ -94,28 +94,31 @@ body {
 /* Flexbox for the Focus List */
 .focus-list {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem; /* Add spacing between items */
+  flex-direction: column; /* Stack items vertically */
+  gap: 15px; /* Adjust vertical spacing */
 }
+
 .focus-item {
   display: flex;
-  align-items: center; /* Aligns text and image horizontally */
+  align-items: center; /* Align items horizontally */
   gap: 10px; /* Space between image and text */
+  padding: 5px 0; /* Add slight vertical padding */
 }
+
 .focus-item img {
   width: 24px; /* Adjust icon size */
   height: 24px;
+  vertical-align: middle; /* Aligns with text */
 }
 
-.focus-list p {
-  background-color: transparent; /* No background */
-  padding: 1rem;
-  border-radius: 5px;
+.focus-item p {
+  font-size: 20px;
   color: white;
-  flex: 1;
-  font-size:20px;
-  position: relative; /* Ensures the bullet positions correctly */
   font-family: var(--paragraph-font);
+  margin: 0; /* Removes default margin */
+  display: flex;
+  align-items: center; /* Ensures text aligns with the image */
+  line-height: 24px; /* Matches the text height with the image */
 }
 
 h2 {
