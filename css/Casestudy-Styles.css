@@ -31,6 +31,12 @@
   font-family: var(--paragraph-font);
   padding-left: 5rem; /* Apply padding only to the paragraph */
 }
+.hero-h1 h4 {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-family: var(--paragraph-font);
+  padding-left: 5rem; /* Apply padding only to the paragraph */
+}
 .welcome-image {
   max-width: 60%;
   height: auto;
