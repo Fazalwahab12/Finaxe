@@ -12,7 +12,7 @@
 
 .section-subtitle {
   font-family: var(--paragraph-font);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   color: var(--white); /* Changed to white */
   margin-top: 8px;
@@ -88,6 +88,9 @@
   flex-grow: 1;
   position: relative;
 }
+
+
+
 
 .card-content h3 {
   font-size: 20px;
