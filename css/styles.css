@@ -97,6 +97,16 @@
   font-family: var(--paragraph-font);
 }
 
+.card-content h4 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 16px;
+  font-family: var(--paragraph-font);
+  text-transform: uppercase;
+}
+
+
 /* Initially Hidden Text */
 .hidden-text {
   opacity: 0;
