@@ -106,7 +106,7 @@
   color: #333;
   margin-bottom: 16px;
   font-family: var(--paragraph-font);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 
