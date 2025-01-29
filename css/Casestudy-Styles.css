@@ -64,9 +64,9 @@ h2 {
 }
 
 /* Focus Areas Specific Styles */
-.focus-areas {
+.focus-areas1 {
   margin-bottom: 2rem;
-  margin-left: 3rem;
+  margin-left: 5rem;
   margin-top: 3rem;
 }
 
@@ -82,58 +82,45 @@ body {
   background: var(--darker-blue);
   color: #fff; /* Default text color to white */
 }
-.focus-areas {
-  max-width: 45%; /* Limit width */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center vertically */
-  align-items: flex-start; /* Align text to the left */
-  text-align: left;
-  padding: 2rem;
-}
 
 .focus-title {
   font-size: 40px;
+  margin-bottom: 1rem;
   text-transform: uppercase;
+  border-bottom: none; /* No underline */
   font-family: var(--header-font);
 }
 
+/* Flexbox for the Focus List */
 .focus-list {
   display: flex;
-  flex-direction: column; /* Stack items */
-  gap: 15px;
+  flex-direction: column; /* Stack items vertically */
+  gap: 15px; /* Adjust vertical spacing */
 }
 
 .focus-item {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 5px 0;
+  align-items: center; /* Align items horizontally */
+  gap: 10px; /* Space between image and text */
+  padding: 5px 0; /* Add slight vertical padding */
 }
 
 .focus-item img {
-  width: 40px;
-  height: 40px;
+  width: 24px; /* Adjust icon size */
+  height: 24px;
+  vertical-align: middle; /* Aligns with text */
 }
 
 .focus-item p {
   font-size: 20px;
-  font-family: var(--paragraph-font);
   color: white;
+  font-family: var(--paragraph-font);
+  margin: 0; /* Removes default margin */
+  display: flex;
+  align-items: center; /* Ensures text aligns with the image */
+  line-height: 24px; /* Matches the text height with the image */
 }
-@media (max-width: 1024px) {
-  .hero-content {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .welcome-image,
-  .focus-areas {
-    max-width: 100%; /* Full width on smaller screens */
-    text-align: center;
-    align-items: center;
-  }
-}
 h2 {
   font-size: 1.8rem;
   margin-bottom: 2rem; /* Add spacing before the heading */
@@ -199,15 +186,31 @@ h2 {
     gap: 1rem; /* Space between items when stacked */
   }
 }
-.hero-content {
+.hero-container {
   display: flex;
-  align-items: center; /* Align items vertically */
-  justify-content: space-between; /* Space between image and text */
-  flex-wrap: wrap; /* Allow wrapping on small screens */
-  padding: 2rem 5rem;
+  align-items: center;
+  gap: 6rem; /* Space between image and focus areas */
 }
+
+.hero-h1 {
+  flex: 2; /* Increased width to twice its original */
+}
+
+.focus-areas {
+  flex: 1;
+  width: 50%; /* Set width size */
+  margin-left: 0; /* Align focus section to the left side */
+  margin-top: 9rem; /* Add space from the top */
+}
+
 .welcome-image {
-  max-width: 50%; /* Adjust image width */
+  max-width: 100%;
   height: auto;
   display: block;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column; /* Stack sections on small screens */
+  }
 }
