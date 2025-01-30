@@ -179,6 +179,25 @@ h2 {
     grid-template-columns: 1fr; /* Single column */
   }
 }
+@media (max-width: 768px) {
+  /* Adjust hero text padding */
+  .hero-h1 h1,
+  .hero-h1 p,
+  .hero-h1 h4 {
+    padding-left: 1rem;
+  }
+
+  /* Adjust focus areas/specializations margins */
+  .focus-areas1 {
+    margin-left: 1rem;
+  }
+
+  /* Adjust specializations grid margins */
+  .specializations {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
 
 @media (max-width: 768px) {
   .focus-list {
@@ -202,7 +221,13 @@ h2 {
   margin-left: 0; /* Align focus section to the left side */
   margin-top: 9rem; /* Add space from the top */
 }
-
+@media (max-width: 768px) {
+  .focus-areas {
+    margin-top: 0; /* Mobile override */
+    width: 100%;
+    margin-left: 2rem;
+  }
+}
 .welcome-image {
   max-width: 100%;
   height: auto;
