@@ -239,3 +239,17 @@ h2 {
     flex-direction: column; /* Stack sections on small screens */
   }
 }
+
+.my-image {
+  width: 50%; /* Default for large screens */
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  margin-left: 0;
+}
+
+@media (max-width: 991px) {
+  .my-image {
+    width: 100%; /* Apply 100% width on small screens */
+  }
+}
