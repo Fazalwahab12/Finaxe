@@ -253,3 +253,39 @@ h2 {
     width: 100%; /* Apply 100% width on small screens */
   }
 }
+.description,
+.lessons {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+}
+.sub-list {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #fff; /* Sets text color to white */
+}
+
+.list li::before {
+  content: "▪";
+  color: #a64cff;
+  position: absolute;
+  left: 0;
+  font-size: 18px;
+}
+
+.bold {
+  font-weight: bold;
+}
