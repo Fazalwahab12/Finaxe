@@ -280,7 +280,7 @@ h2 {
 
 .list li::before {
   content: "▪";
-  color: #a64cff;
+  color: #f3eff7;
   position: absolute;
   left: 0;
   font-size: 18px;
