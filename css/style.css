@@ -3832,9 +3832,6 @@ li {
 /* --------------------------------------
    Nested Sub-Menu (Second Level) 
 -------------------------------------- */
-.has-submenu {
-  position: relative; /* So we can position sub-dropdown absolutely */
-}
 
 /* By default, hide sub-dropdown */
 .sub-dropdown {
@@ -3856,23 +3853,8 @@ li {
 }
 
 /* Show the sub-dropdown on hover */
-.has-submenu:hover > .sub-dropdown {
-  opacity: 1;
-  visibility: visible;
-  top: 0; /* Align top edges */
-  left: 100%; /* Shift it to the right of the parent menu item */
-}
 
 /* Nested sub-sub-dropdown if needed (third level, etc.) 
    Same pattern: .has-submenu .sub-dropdown .has-submenu .sub-dropdown { ... } 
    – You can repeat or fine-tune these rules for deeper nesting.
 */
-
-/* Example arrow (optional) for nested submenus */
-.has-submenu > a::after {
-  content: ">";
-  float: right;
-  margin-left: 0.5rem;
-  font-size: 0.8rem;
-  opacity: 0.6;
-}
