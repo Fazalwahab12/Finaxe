@@ -110,6 +110,35 @@ body {
   height: 24px;
   vertical-align: middle; /* Aligns with text */
 }
+.challenge-section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-family: var(--paragraph-font);
+}
+
+.challenge-section h1 {
+  font-size: 40px;
+  margin-bottom: 1rem;
+  font-family: var(--header-font);
+}
+
+.challenge-section p {
+  font-size: 18px;
+  margin-bottom: 1rem;
+  font-family: var(--paragraph-font);
+}
+
+.challenge-section ul {
+  list-style-type: disc;
+  padding-left: 6rem;
+  color: #fff;
+}
+
+.challenge-section li {
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+  color: #fff;
+}
 
 .focus-item p {
   font-size: 20px;
@@ -162,6 +191,16 @@ h2 {
   list-style-type: none; /* Remove bullets if it were a list */
   font-family: var(--paragraph-font);
   font-size: 20px;
+}
+.focus-areas1 {
+  font-family: var(--paragraph-font);
+}
+
+.focus-areas1 .focus-title,
+.focus-areas1 .description,
+.focus-areas1 .list li,
+.focus-areas1 .sub-list {
+  font-family: var(--paragraph-font);
 }
 
 /* Responsive: Make it 1 column on small screens */
