@@ -34,7 +34,7 @@ function autoSlide() {
     updateSlidePosition();
   }
 }
-let slideInterval = setInterval(autoSlide, 5000);
+let slideInterval = setInterval(autoSlide, 7000);
 
 // If you want to toggle pause/play via a button, you could do something like:
 // const pauseButton = document.querySelector(".pause-button");
