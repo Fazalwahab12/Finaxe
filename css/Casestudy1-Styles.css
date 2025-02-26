@@ -19,7 +19,7 @@
 }
 
 .hero-h1 h1 {
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: 1rem;
   font-family: var(--header-font);
   padding-left: 7rem; /* Apply padding only to the H1 */
@@ -85,7 +85,7 @@ body {
 
 .focus-title {
   font-size: 30px;
-  margin-bottom: 1rem;
+
   text-transform: uppercase;
   border-bottom: none; /* No underline */
   font-family: var(--header-font);
@@ -95,13 +95,13 @@ body {
 .focus-list {
   display: flex;
   flex-direction: column; /* Stack items vertically */
-  gap: 15px; /* Adjust vertical spacing */
+  gap: 0px; /* Adjust vertical spacing */
 }
 
 .focus-item {
   display: flex;
   align-items: center; /* Align items horizontally */
-  gap: 10px; /* Space between image and text */
+  gap: 5px; /* Space between image and text */
   padding: 5px 0; /* Add slight vertical padding */
 }
 
@@ -123,7 +123,7 @@ body {
 }
 
 .challenge-section p {
-  font-size: 20px;
+  font-size: 17px;
   margin-bottom: 1rem;
   font-family: var(--paragraph-font);
 }
@@ -135,13 +135,12 @@ body {
 }
 
 .challenge-section li {
-  margin-bottom: 0.5rem;
-  font-size: 20px;
+  font-size: 17px;
   color: #fff;
 }
 
 .focus-item p {
-  font-size: 20px;
+  font-size: 16px;
   color: white;
   font-family: var(--paragraph-font);
   margin: 0; /* Removes default margin */
@@ -152,7 +151,7 @@ body {
 
 h2 {
   font-size: 1.8rem;
-  margin-bottom: 2rem; /* Add spacing before the heading */
+
   text-transform: uppercase;
   font-family: var(--header-font);
 }
@@ -179,6 +178,7 @@ h2 {
   margin-bottom: 1rem;
   font-family: var(--header-font);
   font-size: 30px;
+  font-weight: bold;
 }
 
 .points-list {
@@ -190,7 +190,7 @@ h2 {
   margin-bottom: 20px; /* Add space between paragraphs */
   list-style-type: none; /* Remove bullets if it were a list */
   font-family: var(--paragraph-font);
-  font-size: 20px;
+  font-size: 17px;
 }
 .focus-areas1 {
   font-family: var(--paragraph-font);
@@ -241,7 +241,7 @@ h2 {
 @media (max-width: 768px) {
   .focus-list {
     flex-direction: column; /* Stack items vertically on small screens */
-    gap: 1rem; /* Space between items when stacked */
+    gap: 0.5rem; /* Space between items when stacked */
   }
 }
 .hero-container {
@@ -294,7 +294,7 @@ h2 {
 }
 .description,
 .lessons {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.5;
 }
 
@@ -307,7 +307,7 @@ h2 {
   position: relative;
   padding-left: 20px;
   margin-bottom: 15px;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.5;
   color: #fff;
 }
