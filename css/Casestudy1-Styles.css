@@ -154,7 +154,7 @@ h2 {
 
 .specializations {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  grid-template-columns: repeat(5, 1fr); /* 4 equal columns */
   gap: 2rem;
   margin-bottom: 2rem;
 }
