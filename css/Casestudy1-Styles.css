@@ -22,20 +22,20 @@
   font-size: 40px;
   margin-bottom: 1rem;
   font-family: var(--header-font);
-  padding-left: 7rem; /* Apply padding only to the H1 */
+  /* Apply padding only to the H1 */
 }
 
 .hero-h1 p {
   font-size: 20px;
   margin-bottom: 2rem;
   font-family: var(--paragraph-font);
-  padding-left: 7rem; /* Apply padding only to the paragraph */
+  /* Apply padding only to the paragraph */
 }
 .hero-h1 h4 {
   font-size: 20px;
   margin-bottom: 2rem;
   font-family: var(--paragraph-font);
-  padding-left: 7rem; /* Apply padding only to the paragraph */
+  /* Apply padding only to the paragraph */
   text-transform: uppercase;
 }
 .welcome-image {
@@ -66,7 +66,7 @@ h2 {
 /* Focus Areas Specific Styles */
 .focus-areas1 {
   margin-bottom: 2rem;
-  margin-left: 7rem;
+
   margin-top: 3rem;
 }
 
@@ -105,11 +105,6 @@ body {
   padding: 5px 0; /* Add slight vertical padding */
 }
 
-.focus-item img {
-  width: 24px; /* Adjust icon size */
-  height: 24px;
-  vertical-align: middle; /* Aligns with text */
-}
 .challenge-section {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -130,7 +125,7 @@ body {
 
 .challenge-section ul {
   list-style-type: disc;
-  padding-left: 8rem;
+
   color: #fff;
 }
 
@@ -162,7 +157,7 @@ h2 {
   gap: 2rem;
   margin-bottom: 2rem;
   /* margin-top: 3rem; */
-  margin-left: 7rem;
+
   margin-right: 7rem;
 }
 
@@ -305,7 +300,7 @@ h2 {
 
 .list li {
   position: relative;
-  padding-left: 20px;
+
   margin-bottom: 15px;
   font-size: 17px;
   line-height: 1.5;
@@ -313,7 +308,7 @@ h2 {
 }
 .sub-list {
   list-style-type: disc;
-  margin-left: 20px;
+
   color: #fff; /* Sets text color to white */
 }
 
