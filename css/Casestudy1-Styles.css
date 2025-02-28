@@ -157,9 +157,6 @@ h2 {
   grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
   gap: 2rem;
   margin-bottom: 2rem;
-  /* margin-top: 3rem; */
-
-  margin-right: 7rem;
 }
 
 .specializations article {
