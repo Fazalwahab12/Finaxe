@@ -324,7 +324,7 @@ h2 {
 
 .client-container {
   display: flex;
-  gap: 80px;
+  gap: 200px;
   justify-content: space-between;
 }
 
