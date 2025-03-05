@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900|Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@900&family=Overpass:wght@100;400;700;900&display=swap");
+:root {
+  --brand-blue: #0091d9;
+  --white: #faf0e6;
+  --brand-black: #1a1a1a;
+  --dark-blue: #282f49;
+  --darker-blue: #1b2031;
+  --header-font: "Chivo", arial-black;
+  --paragraph-font: "Overpass", sans-serif;
+}
+.case_content {
+  width: 100%;
+  margin-top: 50px;
+  padding: 40px 20px;
+  background: var(--darker-blue);
+  display: flex;
+  flex-direction: column; /* Stack container and controls vertically */
+  justify-content: center;
+  align-items: center;
+}
+
+/* SLIDER CONTAINER */
+.slider-container {
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden; /* Hide overflow so slides don't extend outside */
+  position: relative;
+}
+
+/* SLIDER */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 400%; /* 4 slides => 4 x 100% of the container = 400% */
+}
+
+/* SLIDES */
+.slide {
+  width: 25%; /* 4 slides => each is 25% */
+  padding: 2rem;
+  flex-shrink: 0;
+}
+
+/* SLIDE CONTENT */
+.content {
+  display: flex;
+  gap: 4rem;
+  height: 100%;
+  align-items: center;
+}
+
+.visual {
+  flex: 1;
+  position: relative;
+}
+
+.visual img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.text-content {
+  flex: 1;
+  padding-top: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-family: var(--header-font);
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: var(--paragraph-font);
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  color: #fff;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: #0091d9;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* CONTROLS */
+.controls {
+  margin-top: 1rem; /* Some spacing below the slides */
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.slide-counter {
+  color: white;
+  font-weight: bold;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  /* Text first on mobile */
+  .text-content {
+    order: -1;
+    padding-top: 0;
+  }
+
+  .visual img {
+    max-width: 100%;
+    height: auto;
+    animation: none; /* Remove float on small screens */
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .read-more {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .read-more {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,196 @@
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-family:Overpass;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--white); /* Changed to white */
+}
+
+.section-subtitle {
+  font-family: var(--paragraph-font);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--white); /* Changed to white */
+  margin-top: 8px;
+}
+.sub-dropdown {
+  list-style: none; /* Removes the default bullet points */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+}
+
+.sub-dropdown li {
+  margin-bottom: 8px; /* Optional: Adds spacing between items */
+}
+
+.sub-dropdown li a {
+  text-decoration: none; /* Removes underline from links */
+  /* Matches the parent text color */
+  display: block; /* Ensures the links are block-level for better clickability */
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@900&family=Overpass:wght@100;400;700;900&display=swap");
+
+:root {
+  --brand-blue: #0091d9;
+  --white: #faf0e6;
+  --brand-black: #1a1a1a;
+  --dark-blue: #282f49;
+  --darker-blue: #1b2031;
+  --header-font: "Overpass", arial-black;
+  --paragraph-font: "Overpass", sans-serif;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 0;
+}
+
+.card {
+  background: #f1f1ef;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  border-radius: 0;
+  padding: 0; /* Remove any padding */
+  margin: 0; /* Ensure no margins cause spacing */
+}
+.card,
+.card-image,
+.card img {
+  border: none !important;
+  outline: none !important; /* Removes any default focus outline */
+  box-shadow: none !important; /* Ensures no box-shadow causing a border effect */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Content */
+.card-content {
+  padding: 16px;
+  text-align: left;
+  flex-grow: 1;
+  position: relative;
+}
+
+
+
+
+.card-content h3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 16px;
+  font-family: var(--paragraph-font);
+}
+
+.card-content h4 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 16px;
+  font-family: var(--paragraph-font);
+  /* text-transform: uppercase; */
+}
+
+
+/* Initially Hidden Text */
+.hidden-text {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  font-size: 14px;
+  color: #444;
+}
+
+.card:hover .hidden-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Image Container */
+.card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+
+  border-radius: 0;
+}
+
+/* Expand Link */
+.expand-link {
+  position: absolute;
+  bottom: 20px;
+  left: 70%;
+  transform: translateX(-50%);
+  font-family: var(--header-font);
+  color: rgb(5, 0, 0);
+  border-radius: 4px;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.card:hover .expand-link {
+  opacity: 1;
+}
+
+/* Hover Effect: Hide Image, Show Text & Expand Link */
+.card:hover .card-image img {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.card:hover .hidden-text {
+  opacity: 1;
+}
+
+.card:hover .expand-link {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card img {
+    height: 200px;
+  }
+
+  .card-content h3 {
+    font-size: 16px;
+  }
+}
