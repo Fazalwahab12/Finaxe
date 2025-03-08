@@ -22,20 +22,20 @@
   font-size: 50px;
   margin-bottom: 1rem;
   font-family: var(--header-font);
-  padding-left: 7rem; /* Apply padding only to the H1 */
+  padding-left: 11rem; /* Apply padding only to the H1 */
 }
 
 .hero-h1 p {
   font-size: 20px;
   margin-bottom: 2rem;
   font-family: var(--paragraph-font);
-  padding-left: 7rem; /* Apply padding only to the paragraph */
+  padding-left: 11rem; /* Apply padding only to the paragraph */
 }
 .hero-h1 h4 {
   font-size: 20px;
   margin-bottom: 2rem;
   font-family: var(--paragraph-font);
-  padding-left: 7rem; /* Apply padding only to the paragraph */
+  padding-left: 11rem; /* Apply padding only to the paragraph */
   text-transform: uppercase;
 }
 .welcome-image {
@@ -66,7 +66,7 @@ h2 {
 /* Focus Areas Specific Styles */
 .focus-areas1 {
   margin-bottom: 2rem;
-  margin-left: 7rem;
+  margin-left: 11rem;
   margin-top: 3rem;
 }
 
@@ -134,8 +134,8 @@ h2 {
   gap: 2rem;
   margin-bottom: 2rem;
   /* margin-top: 3rem; */
-  margin-left: 7rem;
-  margin-right: 7rem;
+  margin-left: 11rem;
+  margin-right: 11rem;
 }
 
 .specializations article {
