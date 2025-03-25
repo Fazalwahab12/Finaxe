@@ -19,7 +19,7 @@
 }
 
 .hero-h1 h1 {
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: 1rem;
   font-family: var(--header-font);
   padding-left: 11rem; /* Apply padding only to the H1 */
@@ -85,7 +85,7 @@ body {
 
 .focus-title {
   font-size: 30px;
-  margin-bottom: 1rem;
+
   text-transform: uppercase;
   border-bottom: none; /* No underline */
   font-family: var(--header-font);
@@ -95,13 +95,13 @@ body {
 .focus-list {
   display: flex;
   flex-direction: column; /* Stack items vertically */
-  gap: 15px; /* Adjust vertical spacing */
+  gap: 0px; /* Adjust vertical spacing */
 }
 
 .focus-item {
   display: flex;
   align-items: center; /* Align items horizontally */
-  gap: 10px; /* Space between image and text */
+  gap: 5px; /* Space between image and text */
   padding: 5px 0; /* Add slight vertical padding */
 }
 
@@ -110,9 +110,37 @@ body {
   height: 24px;
   vertical-align: middle; /* Aligns with text */
 }
+.challenge-section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-family: var(--paragraph-font);
+}
+
+.challenge-section h1 {
+  font-size: 30px;
+  margin-bottom: 1rem;
+  font-family: var(--header-font);
+}
+
+.challenge-section p {
+  font-size: 17px;
+  margin-bottom: 1rem;
+  font-family: var(--paragraph-font);
+}
+
+.challenge-section ul {
+  list-style-type: disc;
+  padding-left: 12rem;
+  color: #fff;
+}
+
+.challenge-section li {
+  font-size: 17px;
+  color: #fff;
+}
 
 .focus-item p {
-  font-size: 20px;
+  font-size: 16px;
   color: white;
   font-family: var(--paragraph-font);
   margin: 0; /* Removes default margin */
@@ -123,7 +151,7 @@ body {
 
 h2 {
   font-size: 1.8rem;
-  margin-bottom: 2rem; /* Add spacing before the heading */
+
   text-transform: uppercase;
   font-family: var(--header-font);
 }
@@ -150,12 +178,9 @@ h2 {
   margin-bottom: 1rem;
   font-family: var(--header-font);
   font-size: 30px;
+  font-weight: bold;
 }
-.specializations p {
-  font-size: 20px;
-  color: white;
-  font-family: var(--paragraph-font);
-}
+
 .points-list {
   flex: 1; /* Allow the list to take up available space */
 }
@@ -165,7 +190,17 @@ h2 {
   margin-bottom: 20px; /* Add space between paragraphs */
   list-style-type: none; /* Remove bullets if it were a list */
   font-family: var(--paragraph-font);
-  font-size: 20px;
+  font-size: 17px;
+}
+.focus-areas1 {
+  font-family: var(--paragraph-font);
+}
+
+.focus-areas1 .focus-title,
+.focus-areas1 .description,
+.focus-areas1 .list li,
+.focus-areas1 .sub-list {
+  font-family: var(--paragraph-font);
 }
 
 /* Responsive: Make it 1 column on small screens */
@@ -206,7 +241,7 @@ h2 {
 @media (max-width: 768px) {
   .focus-list {
     flex-direction: column; /* Stack items vertically on small screens */
-    gap: 1rem; /* Space between items when stacked */
+    gap: 0.5rem; /* Space between items when stacked */
   }
 }
 .hero-container {
@@ -255,5 +290,101 @@ h2 {
 @media (max-width: 991px) {
   .my-image {
     width: 100%; /* Apply 100% width on small screens */
+  }
+}
+.description,
+.lessons {
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #fff;
+}
+.sub-list {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #fff; /* Sets text color to white */
+}
+
+.list li::before {
+  content: "▪";
+  color: #f3eff7;
+  position: absolute;
+  left: 0;
+  font-size: 18px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.client-container {
+  display: flex;
+  gap: 100px;
+  justify-content: space-between;
+}
+
+.client-container img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.focus-areas2 {
+  width: 50%;
+  flex-direction: column;
+
+  display: flex;
+}
+
+.focus-title1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.focus-list {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.focus-item {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .client-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0px;
+  }
+
+  .client-container img,
+  .focus-areas2 {
+    width: 100%;
+    height: auto;
+  }
+
+  .focus-areas2 {
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .focus-list {
+    margin-top: 0;
   }
 }
